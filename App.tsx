@@ -30,9 +30,7 @@ import Button from './src/components/buttons';
 const App = () => {
   return (
     <SafeAreaView style={stylesApp.main}>
-      <Text style={stylesApp.textSize}>Login</Text>
       <Registerview />
-      <Button />
     </SafeAreaView>
   );
 };
