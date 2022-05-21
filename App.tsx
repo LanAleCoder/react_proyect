@@ -24,12 +24,13 @@ import //Colors,
 'react-native/Libraries/NewAppScreen';
 
 import Registerview from './src/views/Register';
+import Login from './src/views/login'
 import stylesApp from './App.styles';
 
 const App = () => {
   return (
     <SafeAreaView style={stylesApp.main}>
-      <Text style={stylesApp.textSize}>Login</Text>
+        <Login/>
       <Registerview />
     </SafeAreaView>
   );
