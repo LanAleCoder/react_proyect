@@ -10,6 +10,7 @@ const style = StyleSheet.create({
         margin: 4,
         borderRadius: 100,
         flexGrow: 1,
+        color: Theme.colors.TEXT_COLOR,
     }
 
 });

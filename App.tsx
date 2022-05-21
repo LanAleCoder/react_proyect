@@ -26,14 +26,12 @@ import //Colors,
 import Registerview from './src/views/Register';
 import Login from './src/views/login'
 import stylesApp from './App.styles';
-import Button from './src/components/buttons';
 
 const App = () => {
   return (
     <SafeAreaView style={stylesApp.main}>
         <Login/>
       <Registerview />
-      <Button />
     </SafeAreaView>
   );
 };
