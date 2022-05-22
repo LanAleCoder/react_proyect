@@ -25,7 +25,6 @@ import //Colors,
 
 import Registerview from './src/views/Register';
 import stylesApp from './App.styles';
-import Button from './src/components/buttons';
 
 const App = () => {
   return (
