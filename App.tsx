@@ -9,27 +9,15 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  // ScrollView,
-  Text,
-  //View,
-} from 'react-native';
+import {SafeAreaView} from 'react-native';
 
-import //Colors,
-//DebugInstructions,
-//Header,
-//LearnMoreLinks,
-//ReloadInstructions,
-'react-native/Libraries/NewAppScreen';
-
-import Registerview from './src/views/Register';
 import stylesApp from './App.styles';
+import HomeView from './src/views/Home';
 
 const App = () => {
   return (
     <SafeAreaView style={stylesApp.main}>
-      <Registerview />
+      <HomeView />
     </SafeAreaView>
   );
 };

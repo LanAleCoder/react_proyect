@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TextInput, Image, TouchableOpacity} from 'react-native';
+import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 import registerStyle from './register.styles';
 import Button from '../../components/buttons';
 import SVGFacebook from '../../../utils/res/img/facebook (1).svg';
@@ -38,7 +38,7 @@ const Registerview = () => {
           </TouchableOpacity>
           <TouchableOpacity style={registerStyle.buttonsTouchable}>
             <SVGEmail width={40} height={40} />
-          </TouchableOpacity >
+          </TouchableOpacity>
           <TouchableOpacity style={registerStyle.buttonsTouchable}>
             <SVGithub width={40} height={40} />
           </TouchableOpacity>
