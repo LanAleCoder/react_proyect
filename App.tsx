@@ -9,12 +9,7 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  // ScrollView,
-  Text,
-  //View,
-} from 'react-native';
+import {SafeAreaView} from 'react-native';
 
 import //Colors,
 //DebugInstructions,
