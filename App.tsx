@@ -9,7 +9,7 @@
  */
 
 import React from 'react';
-import {SafeAreaView} from 'react-native';
+import {View, SafeAreaView, ScrollView} from 'react-native';
 
 import //Colors,
 //DebugInstructions,
@@ -19,14 +19,30 @@ import //Colors,
 'react-native/Libraries/NewAppScreen';
 
 import Registerview from './src/views/Register';
-import Login from './src/views/login'
+import Login from './src/views/login';
+import Home from './src/views/Home';
 import stylesApp from './App.styles';
+
+const Space=() => {
+  return(<View style={{
+    flexDirection: "row",
+    height: 150,
+  }}> 
+  </View> 
+  )
+  
+}
 
 const App = () => {
   return (
     <SafeAreaView style={stylesApp.main}>
+      <ScrollView>
+        <Home/>
+          <Space/>
         <Login/>
-      <Registerview />
+          <Space/>
+        <Registerview /> 
+      </ScrollView>
     </SafeAreaView>
   );
 };
