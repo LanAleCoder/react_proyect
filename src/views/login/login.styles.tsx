@@ -38,6 +38,7 @@ const style = StyleSheet.create({
     height: '50%',
     borderTopStartRadius: 35,
     borderTopEndRadius: 35,
+    color: theme.colors.TEXT_COLOR,
   },
   buttonsSocialNetworks: {
     flexDirection: 'row',

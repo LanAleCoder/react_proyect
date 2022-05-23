@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 import style from './login.styles';
 import Button from '../../components/buttons';
+import theme from '../../components/theme';
 import SVGFacebook from '../../../utils/res/img/facebook (1).svg';
 import SVGithub from '../../../utils/res/img/github (1).svg';
 import SVGEmail from '../../../utils/res/img/mail.svg';
@@ -17,11 +18,13 @@ const Login = () => {
       </View>
       <TextInput
         placeholder="User/email"
+        placeholderTextColor={theme.colors.TEXT_COLOR}
         style={style.inputStyle}
         underlineColorAndroid="transparent"
       />
       <TextInput
         placeholder="Password"
+        placeholderTextColor={theme.colors.TEXT_COLOR}
         style={style.inputStyle}
         secureTextEntry={true}
       />

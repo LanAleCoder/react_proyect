@@ -38,6 +38,7 @@ const registerStyle = StyleSheet.create({
     height: '100%',
     borderTopStartRadius: 35,
     borderTopEndRadius: 35,
+    color: theme.colors.TEXT_COLOR,
   },
   buttonsSocialNetworks: {
     flexDirection: 'row',
