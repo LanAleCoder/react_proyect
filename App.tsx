@@ -23,25 +23,25 @@ import Login from './src/views/login';
 import Home from './src/views/Home';
 import stylesApp from './App.styles';
 
-const Space=() => {
-  return(<View style={{
-    flexDirection: "row",
-    height: 150,
-  }}> 
-  </View> 
-  )
-  
-}
+const Space = () => {
+  return (
+    <View
+      style={{
+        flexDirection: 'row',
+        height: 150,
+      }}></View>
+  );
+};
 
 const App = () => {
   return (
     <SafeAreaView style={stylesApp.main}>
       <ScrollView>
-        <Home/>
-          <Space/>
-        <Login/>
-          <Space/>
-        <Registerview /> 
+        <Home />
+        <Space />
+        <Login />
+        <Space />
+        <Registerview />
       </ScrollView>
     </SafeAreaView>
   );

@@ -20,7 +20,7 @@ const style = StyleSheet.create({
   containerRegister: {alignItems: 'center', marginTop: 100, flex: 1},
   inputStyle: {
     color: '#ffffff',
-    fontSize: theme.fonts.TEXTO_NORMAL,
+    fontSize: theme.fonts.REGULAR_TEXT,
     width: 250,
     height: 50,
     borderRadius: 15,

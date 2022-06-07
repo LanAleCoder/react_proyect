@@ -7,7 +7,7 @@ const buttonStyle = StyleSheet.create({
   },
   text: {
     textAlign: 'center',
-    fontSize: 25,
+    fontSize: theme.fonts.BTN_REGULAR_TEXT,
     fontFamily: 'Poppins-Regular',
   },
   touchableOp: {
