@@ -21,19 +21,17 @@ const Registerview = () => {
       placeholder="Name"
       secureTextEntry={false}
       />
-      <TextInput
-        placeholder="Name"
-        placeholderTextColor={theme.colors.TEXT_COLOR}
-        style={registerStyle.inputStyle}
-        underlineColorAndroid="transparent"
+      <CustomTI
+      placeholder="Last Name"
+      secureTextEntry={false}
       />
-      <TextInput placeholder="Last Name" style={registerStyle.inputStyle} placeholderTextColor={theme.colors.TEXT_COLOR}/>
-      <TextInput placeholder="Email" style={registerStyle.inputStyle} placeholderTextColor={theme.colors.TEXT_COLOR}/>
-      <TextInput
-        placeholder="Password"
-        placeholderTextColor={theme.colors.TEXT_COLOR}
-        style={registerStyle.inputStyle}
-        secureTextEntry={true}
+      <CustomTI
+      placeholder="Email"
+      secureTextEntry={false}
+      />
+      <CustomTI
+      placeholder="Password"
+      secureTextEntry={true}
       />
       <View style={registerStyle.buttonContainer}>
         <Button title="Sign Up" />
