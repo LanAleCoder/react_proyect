@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 import registerStyle from './register.styles';
 import Button from '../../components/buttons';
+import CustomTI from '../../components/textInput';
 import theme from '../../components/theme';
 import SVGFacebook from '../../../utils/res/img/facebook (1).svg';
 import SVGithub from '../../../utils/res/img/github (1).svg';
@@ -16,6 +17,10 @@ const Registerview = () => {
           Fill the form to join or create a new account
         </Text>
       </View>
+      <CustomTI
+      placeholder="Name"
+      secureTextEntry={false}
+      />
       <TextInput
         placeholder="Name"
         placeholderTextColor={theme.colors.TEXT_COLOR}
