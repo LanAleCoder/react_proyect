@@ -4,7 +4,7 @@ import homeStyles from './home.styles';
 import SVGCar from '../../utils/res/img/car.svg';
 import Button from '../../components/buttons';
 
-const HomeView = () => {
+const HomeView = ({navigation}) => {
   return (
     <View style={homeStyles.homeContainer}>
       <View style={homeStyles.containerImage}>
@@ -21,7 +21,12 @@ const HomeView = () => {
         </View>
       </View>
       <View style={homeStyles.containerButton}>
-        <Button title="Registrate" />
+        <Button
+          title="Registrate"
+          onPress={function () {
+            navigation.navigate('Login');
+          }}
+        />
       </View>
     </View>
   );

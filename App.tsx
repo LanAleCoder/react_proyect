@@ -12,8 +12,6 @@ import React from 'react';
 import {SafeAreaView} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Button from './src/components/buttons';
-
 import Register from './src/views/Register';
 import Login from './src/views/login';
 import Home from './src/views/Home';
@@ -24,7 +22,13 @@ const Stack = createNativeStackNavigator();
 const App = () => {
   return (
     <SafeAreaView style={stylesApp.main}>
-      <Login />
+      <NavigationContainer>
+        <Stack.Navigator screenOptions={{headerShown: false}}>
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Register" component={Register} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </SafeAreaView>
   );
 };

@@ -4,7 +4,7 @@ import {View, Text, TouchableOpacity} from 'react-native';
 import style from './login.styles';
 import Button from '../../components/buttons';
 
-const Login = () => {
+const Login = ({navigation}) => {
   return (
     <View>
       <View style={style.containerText}>
@@ -17,7 +17,12 @@ const Login = () => {
       </View>
       <CustomTI placeholder="User/email" secureTextEntry={false} />
       <CustomTI placeholder="Password" secureTextEntry={true} />
-      <Button title="Log In" />
+      <Button
+        title="Log In"
+        onPress={function () {
+          navigation.navigate('Register');
+        }}
+      />
       <View style={style.buttonsSignUpContainer}>
         <Text style={style.textinfoContainer}>Or Log In with:</Text>
         <View style={style.buttonsSocialNetworks}>

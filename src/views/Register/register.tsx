@@ -19,7 +19,7 @@ const Register = () => {
       <CustomTI placeholder="Last Name" secureTextEntry={false} />
       <CustomTI placeholder="Email" secureTextEntry={false} />
       <CustomTI placeholder="Password" secureTextEntry={true} />
-      <Button title="Sign Up" />
+      <Button title="Sign Up" onPress={() => console.log('hola')} />
       <View style={registerStyle.buttonsSignUpContainer}>
         <Text style={registerStyle.textinfoContainer}>Or sign up with:</Text>
         <View style={registerStyle.buttonsSocialNetworks}>
