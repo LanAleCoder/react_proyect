@@ -6,7 +6,7 @@ import Button from '../../components/buttons';
 
 const Login = ({navigation}) => {
   return (
-    <View>
+    <View style={style.mainLogin}>
       <View style={style.containerText}>
         <Text style={style.tittle}>Log In</Text>
         <View style={style.infoContainer}>
