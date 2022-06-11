@@ -2,7 +2,11 @@ import {StyleSheet} from 'react-native';
 import theme from '../../components/theme';
 
 const homeStyles = StyleSheet.create({
-  homeContainer: {flex: 1, alignItems: 'center'},
+  homeContainer: {
+    flex: 1,
+    alignItems: 'center',
+    backgroundColor: theme.colors.BLUE_DARK_BACKGROUND,
+  },
   containerImage: {
     alignItems: 'center',
     padding: 50,
