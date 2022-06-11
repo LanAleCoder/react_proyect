@@ -1,8 +1,8 @@
 import React from 'react';
-import {View, Text, TextInput, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import registerStyle from './register.styles';
 import Button from '../../components/buttons';
-import theme from '../../components/theme';
+import CustomTI from '../../components/textInput';
 import SVGFacebook from '../../../utils/res/img/facebook (1).svg';
 import SVGithub from '../../../utils/res/img/github (1).svg';
 import SVGEmail from '../../../utils/res/img/mail.svg';
@@ -16,28 +16,10 @@ const Register = () => {
           Fill the form to join or create a new account
         </Text>
       </View>
-      <TextInput
-        placeholder="Name"
-        placeholderTextColor={theme.colors.TEXT_COLOR}
-        style={registerStyle.inputStyle}
-        underlineColorAndroid="transparent"
-      />
-      <TextInput
-        placeholder="Last Name"
-        style={registerStyle.inputStyle}
-        placeholderTextColor={theme.colors.TEXT_COLOR}
-      />
-      <TextInput
-        placeholder="Email"
-        style={registerStyle.inputStyle}
-        placeholderTextColor={theme.colors.TEXT_COLOR}
-      />
-      <TextInput
-        placeholder="Password"
-        placeholderTextColor={theme.colors.TEXT_COLOR}
-        style={registerStyle.inputStyle}
-        secureTextEntry={true}
-      />
+      <CustomTI placeholder="Name" secureTextEntry={false} />
+      <CustomTI placeholder="Last Name" secureTextEntry={false} />
+      <CustomTI placeholder="Email" secureTextEntry={false} />
+      <CustomTI placeholder="Password" secureTextEntry={true} />
       <View style={registerStyle.buttonContainer}>
         <Button title="Sign Up" />
       </View>

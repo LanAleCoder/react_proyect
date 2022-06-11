@@ -1,8 +1,8 @@
 import React from 'react';
+import CustomTI from '../../components/textInput';
 import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 import style from './login.styles';
 import Button from '../../components/buttons';
-import theme from '../../components/theme';
 import SVGFacebook from '../../../utils/res/img/facebook (1).svg';
 import SVGithub from '../../../utils/res/img/github (1).svg';
 import SVGEmail from '../../../utils/res/img/mail.svg';
@@ -16,17 +16,13 @@ const Login = () => {
           Fill the form to Join to Your account
         </Text>
       </View>
-      <TextInput
-        placeholder="User/email"
-        placeholderTextColor={theme.colors.TEXT_COLOR}
-        style={style.inputStyle}
-        underlineColorAndroid="transparent"
+      <CustomTI
+      placeholder="User/email"
+      secureTextEntry={false}
       />
-      <TextInput
-        placeholder="Password"
-        placeholderTextColor={theme.colors.TEXT_COLOR}
-        style={style.inputStyle}
-        secureTextEntry={true}
+      <CustomTI
+      placeholder="Password"
+      secureTextEntry={true}
       />
       <View style={style.buttonContainer}>
         <Button title="Log In" />

@@ -18,19 +18,7 @@ const registerStyle = StyleSheet.create({
     textAlign: 'center',
   },
   containerRegister: {alignItems: 'center', marginTop: 100, flex: 1},
-  inputStyle: {
-    color: '#ffffff',
-    fontSize: theme.fonts.REGULAR_TEXT,
-    width: 250,
-    height: 50,
-    borderRadius: 15,
-    marginVertical: 10,
-    fontFamily: 'Poppins-Thin',
-    borderColor: theme.colors.COLOR_BORDER_INPUT,
-    borderWidth: 3,
-    paddingHorizontal: 20,
-    textAlignVertical: 'center',
-  },
+
   buttonContainer: {paddingTop: 20, marginBottom: 60},
   buttonsSignUpContainer: {
     backgroundColor: '#6D6D7D',
