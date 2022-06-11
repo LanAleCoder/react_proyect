@@ -3,9 +3,9 @@ import {View, Text, TouchableOpacity} from 'react-native';
 import registerStyle from './register.styles';
 import Button from '../../components/buttons';
 import CustomTI from '../../components/textInput';
-import SVGFacebook from '../../../utils/res/img/facebook (1).svg';
-import SVGithub from '../../../utils/res/img/github (1).svg';
-import SVGEmail from '../../../utils/res/img/mail.svg';
+import SVGFacebook from '../../utils/res/img/facebook (1).svg';
+import SVGithub from '../../utils/res/img/github (1).svg';
+import SVGEmail from '../../utils/res/img/mail.svg';
 
 const Register = () => {
   return (

@@ -1,11 +1,12 @@
 import React from 'react';
 import CustomTI from '../../components/textInput';
-import {View, Text, TextInput, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import style from './login.styles';
 import Button from '../../components/buttons';
-import SVGFacebook from '../../../utils/res/img/facebook (1).svg';
-import SVGithub from '../../../utils/res/img/github (1).svg';
-import SVGEmail from '../../../utils/res/img/mail.svg';
+
+import SVGFacebook from '../../utils/res/img/facebook (1).svg';
+import SVGithub from '../../utils/res/img/github (1).svg';
+import SVGEmail from '../../utils/res/img/mail.svg';
 
 const Login = () => {
   return (
@@ -16,14 +17,8 @@ const Login = () => {
           Fill the form to Join to Your account
         </Text>
       </View>
-      <CustomTI
-      placeholder="User/email"
-      secureTextEntry={false}
-      />
-      <CustomTI
-      placeholder="Password"
-      secureTextEntry={true}
-      />
+      <CustomTI placeholder="User/email" secureTextEntry={false} />
+      <CustomTI placeholder="Password" secureTextEntry={true} />
       <View style={style.buttonContainer}>
         <Button title="Log In" />
       </View>
