@@ -4,6 +4,7 @@ import theme from '../theme';
 const buttonStyle = StyleSheet.create({
   buttonContainer: {
     alignItems: 'center',
+    margin: 13,
   },
   text: {
     textAlign: 'center',

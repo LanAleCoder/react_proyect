@@ -7,26 +7,24 @@ const style = StyleSheet.create({
     fontFamily: 'Koulen-Regular',
     color: '#FFFF',
   },
+  containerText: {alignItems: 'center', margin: 65},
   infoContainer: {
-    flexWrap: 'wrap',
     alignItems: 'center',
     width: 200,
   },
   textinfoContainer: {
     fontFamily: 'Poppins-Light',
-    fontSize: 13,
+    fontSize: theme.fonts.TINY_TEXT,
     textAlign: 'center',
   },
-  containerRegister: {alignItems: 'center', marginTop: 100, flex: 1},
-
-  buttonContainer: {paddingTop: 20, marginBottom: 60},
   buttonsSignUpContainer: {
-    backgroundColor: '#6D6D7D',
+    backgroundColor: theme.colors.BG_COLOR_SOCIALNETWORKS,
     width: '100%',
-    height: '50%',
+    height: '23%',
     borderTopStartRadius: 35,
     borderTopEndRadius: 35,
     color: theme.colors.TEXT_COLOR,
+    marginTop: 150,
   },
   buttonsSocialNetworks: {
     flexDirection: 'row',
@@ -34,7 +32,7 @@ const style = StyleSheet.create({
     marginTop: 20,
   },
   buttonsTouchable: {
-    backgroundColor: '#C2C2C5',
+    backgroundColor: theme.colors.BG_COLOR_BTN_NETWORKS,
     width: 80,
     height: 80,
     borderRadius: 200,
