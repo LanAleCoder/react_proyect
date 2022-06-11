@@ -7,7 +7,7 @@ import SVGFacebook from '../../../utils/res/img/facebook (1).svg';
 import SVGithub from '../../../utils/res/img/github (1).svg';
 import SVGEmail from '../../../utils/res/img/mail.svg';
 
-const Registerview = () => {
+const Register = () => {
   return (
     <View style={registerStyle.containerRegister}>
       <Text style={registerStyle.tittle}>Sign up</Text>
@@ -22,8 +22,16 @@ const Registerview = () => {
         style={registerStyle.inputStyle}
         underlineColorAndroid="transparent"
       />
-      <TextInput placeholder="Last Name" style={registerStyle.inputStyle} placeholderTextColor={theme.colors.TEXT_COLOR}/>
-      <TextInput placeholder="Email" style={registerStyle.inputStyle} placeholderTextColor={theme.colors.TEXT_COLOR}/>
+      <TextInput
+        placeholder="Last Name"
+        style={registerStyle.inputStyle}
+        placeholderTextColor={theme.colors.TEXT_COLOR}
+      />
+      <TextInput
+        placeholder="Email"
+        style={registerStyle.inputStyle}
+        placeholderTextColor={theme.colors.TEXT_COLOR}
+      />
       <TextInput
         placeholder="Password"
         placeholderTextColor={theme.colors.TEXT_COLOR}
@@ -51,4 +59,4 @@ const Registerview = () => {
   );
 };
 
-export default Registerview;
+export default Register;

@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 import homeStyles from './home.styles';
-import SVGCar from '../../../utils/res/img/car.svg';
+import SVGCar from '../../utils/res/img/car.svg';
 import Button from '../../components/buttons';
 
 const HomeView = () => {

@@ -1,2 +1,2 @@
-import Registerview from './register';
-export default Registerview;
+import Register from './register';
+export default Register;

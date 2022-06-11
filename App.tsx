@@ -9,40 +9,31 @@
  */
 
 import React from 'react';
-import {View, SafeAreaView, ScrollView} from 'react-native';
+import {SafeAreaView} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import //Colors,
-//DebugInstructions,
-//Header,
-//LearnMoreLinks,
-//ReloadInstructions,
-'react-native/Libraries/NewAppScreen';
-
-import Registerview from './src/views/Register';
+import Register from './src/views/Register';
 import Login from './src/views/login';
 import Home from './src/views/Home';
 import stylesApp from './App.styles';
 
-const Space = () => {
-  return (
-    <View
-      style={{
-        flexDirection: 'row',
-        height: 150,
-      }}></View>
-  );
-};
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
     <SafeAreaView style={stylesApp.main}>
-      <ScrollView>
-        <Home />
-        <Space />
-        <Login />
-        <Space />
-        <Registerview />
-      </ScrollView>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={Home} />
+        </Stack.Navigator>
+        <Stack.Navigator>
+          <Stack.Screen name="Register" component={Register} />
+        </Stack.Navigator>
+        <Stack.Navigator>
+          <Stack.Screen name="Login" component={Login} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </SafeAreaView>
   );
 };
