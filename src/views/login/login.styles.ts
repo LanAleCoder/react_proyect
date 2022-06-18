@@ -7,7 +7,7 @@ const style = StyleSheet.create({
     fontFamily: 'Koulen-Regular',
     color: '#FFFF',
   },
-  containerText: {alignItems: 'center', margin: 65},
+  containerText: {alignItems: 'center'},
   infoContainer: {
     alignItems: 'center',
     width: 200,
@@ -16,6 +16,7 @@ const style = StyleSheet.create({
     fontFamily: 'Poppins-Light',
     fontSize: theme.fonts.TINY_TEXT,
     textAlign: 'center',
+    color: theme.colors.TEXT_COLOR,
   },
   buttonsSignUpContainer: {
     backgroundColor: theme.colors.BG_COLOR_SOCIALNETWORKS,
@@ -43,6 +44,12 @@ const style = StyleSheet.create({
   },
   buttonSocial: {borderRadius: 100},
   imageSize: {height: 50, width: 50},
+  loginView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: theme.colors.BLUE_DARK_BACKGROUND,
+  },
 });
 
 export default style;
