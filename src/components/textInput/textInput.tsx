@@ -6,9 +6,13 @@ import theme from '../theme';
 const CustomTI = ({
   placeholder,
   secureTextEntry,
+  onChangeText,
+  value,
 }: {
   placeholder: string;
-  secureTextEntry: boolean;
+  secureTextEntry?: boolean;
+  onChangeText?: (text: string) => void;
+  value?: string;
 }) => {
   return (
     <View style={styles.inputContainer}>
@@ -18,6 +22,8 @@ const CustomTI = ({
         style={styles.inputStyle}
         underlineColorAndroid="transparent"
         secureTextEntry={secureTextEntry}
+        onChangeText={onChangeText}
+        value={value}
       />
     </View>
   );
