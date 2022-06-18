@@ -2,6 +2,10 @@ import {StyleSheet} from 'react-native';
 import theme from '../../components/theme';
 
 const registerStyle = StyleSheet.create({
+  mainRegister: {
+    backgroundColor: theme.colors.BLUE_DARK_BACKGROUND,
+  },
+
   tittle: {
     fontSize: theme.fonts.TITLES,
     fontFamily: 'Koulen-Regular',

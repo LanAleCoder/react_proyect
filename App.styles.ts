@@ -4,7 +4,6 @@ import theme from './src/components/theme';
 const stylesApp = StyleSheet.create({
   main: {
     flex: 1,
-    backgroundColor: theme.colors.BLUE_DARK_BACKGROUND,
   },
   textSize: {
     color: '#ffffff',

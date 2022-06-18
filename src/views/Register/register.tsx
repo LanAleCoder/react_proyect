@@ -9,7 +9,7 @@ import SVGEmail from '../../utils/res/img/mail.svg';
 
 const Register = () => {
   return (
-    <View>
+    <View style={registerStyle.mainRegister}>
       <View style={registerStyle.containerText}>
         <Text style={registerStyle.tittle}>Sign up</Text>
         <View style={registerStyle.infoContainer}>

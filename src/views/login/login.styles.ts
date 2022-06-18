@@ -2,6 +2,9 @@ import {StyleSheet} from 'react-native';
 import theme from '../../components/theme';
 
 const style = StyleSheet.create({
+  mainLogin:{
+    backgroundColor: theme.colors.BLUE_DARK_BACKGROUND,
+  },
   tittle: {
     fontSize: theme.fonts.TITLES,
     fontFamily: 'Koulen-Regular',
