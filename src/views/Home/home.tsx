@@ -9,8 +9,6 @@ const HomeView = ({navigation}) => {
     <View style={homeStyles.homeContainer}>
       <View style={homeStyles.containerImage}>
         <SVGCar width={300} height={300} />
-      </View>
-      <View>
         <View>
           <Text style={homeStyles.titleHome}>¡Bienvenido!</Text>
         </View>
@@ -20,14 +18,12 @@ const HomeView = ({navigation}) => {
           </Text>
         </View>
       </View>
-      <View style={homeStyles.containerButton}>
-        <Button
-          title="Registrate"
-          onPress={function () {
-            navigation.navigate('Login');
-          }}
-        />
-      </View>
+      <Button
+        title="Registrate"
+        onPress={function () {
+          navigation.navigate('Login');
+        }}
+      />
     </View>
   );
 };

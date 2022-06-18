@@ -3,15 +3,18 @@ import CustomTI from '../../components/textInput';
 import {View, Text, TouchableOpacity} from 'react-native';
 import style from './login.styles';
 import Button from '../../components/buttons';
+import SVGFacebook from '../../utils/res/img/facebook (1).svg';
+import SVGithub from '../../utils/res/img/github (1).svg';
+import SVGEmail from '../../utils/res/img/mail.svg';
 
 const Login = ({navigation}) => {
   return (
-    <View style={style.mainLogin}>
+    <View style={style.loginView}>
       <View style={style.containerText}>
         <Text style={style.tittle}>Log In</Text>
         <View style={style.infoContainer}>
           <Text style={style.textinfoContainer}>
-            Fill the form to Join to Your account
+            Fill the form to join to your account
           </Text>
         </View>
       </View>
@@ -23,16 +26,28 @@ const Login = ({navigation}) => {
           navigation.navigate('Register');
         }}
       />
-      <View style={style.buttonsSignUpContainer}>
-        <Text style={style.textinfoContainer}>Or Log In with:</Text>
-        <View style={style.buttonsSocialNetworks}>
-          <TouchableOpacity style={style.buttonsTouchable} />
-          <TouchableOpacity style={style.buttonsTouchable} />
-          <TouchableOpacity style={style.buttonsTouchable} />
-        </View>
-      </View>
     </View>
   );
 };
 
 export default Login;
+
+{
+  /* 
+
+
+<View style={style.buttonsSignUpContainer}>
+<Text style={style.textinfoContainer}>Or Log In with:</Text>
+<View style={style.buttonsSocialNetworks}>
+  <TouchableOpacity style={style.buttonsTouchable}>
+    <SVGFacebook width={40} height={40} />
+  </TouchableOpacity>
+  <TouchableOpacity style={style.buttonsTouchable}>
+    <SVGEmail width={40} height={40} />
+  </TouchableOpacity>
+  <TouchableOpacity style={style.buttonsTouchable}>
+    <SVGEmail width={40} height={40} />
+  </TouchableOpacity>
+</View>
+</View> */
+}

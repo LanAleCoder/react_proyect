@@ -2,10 +2,13 @@ import {StyleSheet} from 'react-native';
 import theme from '../../components/theme';
 
 const homeStyles = StyleSheet.create({
-  homeContainer: {flex: 1, alignItems: 'center', backgroundColor: theme.colors.BLUE_DARK_BACKGROUND,},
+  homeContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: theme.colors.BLUE_DARK_BACKGROUND,
+  },
   containerImage: {
     alignItems: 'center',
-    padding: 50,
   },
   containerPhrase: {
     flexWrap: 'wrap',
@@ -13,13 +16,17 @@ const homeStyles = StyleSheet.create({
     width: 300,
     alignContent: 'center',
   },
-  textPhrase: {textAlign: 'center', fontFamily: 'Poppins-Regular'},
+  textPhrase: {
+    textAlign: 'center',
+    fontFamily: 'Poppins-Regular',
+    color: theme.colors.TEXT_COLOR,
+  },
   titleHome: {
     fontSize: theme.fonts.HEADING,
     fontFamily: 'Poppins-Black',
     textAlign: 'center',
+    color: theme.colors.TEXT_COLOR,
   },
-  containerButton: {paddingTop: 20},
 });
 
 export default homeStyles;
