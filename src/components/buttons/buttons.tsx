@@ -1,10 +1,15 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  GestureResponderEvent,
+} from 'react-native';
 import buttonStyle from './buttons.style';
 
 type Props = {
   title: string;
-  onPress(): void;
+  onPress?: (event: GestureResponderEvent) => void;
 };
 
 const Button = ({title, onPress}: Props) => {
