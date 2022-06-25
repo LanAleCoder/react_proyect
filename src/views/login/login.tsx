@@ -48,7 +48,14 @@ const Login = ({navigation}) => {
         value={password}
         onChangeText={text => setPassword(text)}
       />
-      <Button title="Log In" onPress={() => onLogin()} />
+      <Button
+        title="Log In"
+        onPress={() => onLogin()}
+        variant="primary"
+        width={250}
+        height={40}
+        fontSize={20}
+      />
     </View>
   );
 };

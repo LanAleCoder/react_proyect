@@ -17,6 +17,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Register from './src/views/Register';
 import Login from './src/views/login';
 import Home from './src/views/Home';
+import ProfileConfig from './src/views/profileCofiguration';
+import Nationality from './src/views/Nationality';
 import stylesApp from './App.styles';
 import store from './src/services/store';
 
@@ -32,6 +34,11 @@ const App = () => {
               <Stack.Screen name="Login" component={Login} />
               <Stack.Screen name="Home" component={Home} />
               <Stack.Screen name="Register" component={Register} />
+              <Stack.Screen name="Create Account" component={ProfileConfig} />
+              <Stack.Screen
+                name="Select your Nationality"
+                component={Nationality}
+              />
             </Stack.Navigator>
           </NavigationContainer>
         </SafeAreaView>

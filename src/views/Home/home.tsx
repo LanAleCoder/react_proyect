@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Image} from 'react-native';
 import homeStyles from './home.styles';
 import SVGCar from '../../utils/res/img/car.svg';
 import Button from '../../components/buttons';
@@ -19,7 +19,12 @@ const HomeView = ({navigation}) => {
   return (
     <View style={homeStyles.homeContainer}>
       <View style={homeStyles.containerImage}>
-        <SVGCar width={300} height={300} />
+        <Image
+          source={{
+            uri: 'https://icon-library.com/images/profile-icon-white/profile-icon-white-22.jpg',
+          }}
+          style={{width: 150, height: 150}}
+        />
         <View>
           <Text style={homeStyles.titleHome}>¡Bienvenido!</Text>
         </View>
@@ -27,7 +32,14 @@ const HomeView = ({navigation}) => {
           <Text style={homeStyles.textPhrase}>{state.user}</Text>
         </View>
       </View>
-      <Button title="Cerrar sesión" onPress={() => onLogout()} />
+      <Button
+        title="Cerrar sesión"
+        onPress={() => onLogout()}
+        variant="primary"
+        width={200}
+        height={40}
+        fontSize={19}
+      />
     </View>
   );
 };

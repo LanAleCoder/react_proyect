@@ -3,7 +3,7 @@ import {View, Text} from 'react-native';
 import registerStyle from './register.styles';
 import Button from '../../components/buttons';
 import CustomTI from '../../components/textInput';
-const Register = () => {
+const Register = ({navigation}) => {
   return (
     <View style={registerStyle.mainRegister}>
       <View style={registerStyle.containerText}>
@@ -14,11 +14,19 @@ const Register = () => {
           </Text>
         </View>
       </View>
-      <CustomTI placeholder="Name" secureTextEntry={false} />
-      <CustomTI placeholder="Last Name" secureTextEntry={false} />
       <CustomTI placeholder="Email" secureTextEntry={false} />
       <CustomTI placeholder="Password" secureTextEntry={true} />
-      <Button title="Sign Up" onPress={() => console.log('hola')} />
+      <CustomTI placeholder="Confirm password" secureTextEntry={true} />
+      <Button
+        title="Continue"
+        onPress={() => {
+          navigation.navigate('Create Account');
+        }}
+        variant="primary"
+        height={40}
+        width={250}
+        fontSize={19}
+      />
     </View>
   );
 };

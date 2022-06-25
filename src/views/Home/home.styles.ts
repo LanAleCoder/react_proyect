@@ -20,6 +20,7 @@ const homeStyles = StyleSheet.create({
     textAlign: 'center',
     fontFamily: 'Poppins-Regular',
     color: theme.colors.TEXT_COLOR,
+    fontSize: theme.fonts.REGULAR_TEXT
   },
   titleHome: {
     fontSize: theme.fonts.HEADING,
