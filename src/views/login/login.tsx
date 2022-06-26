@@ -1,31 +1,18 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import CustomTI from '../../components/textInput';
 import {View, Text} from 'react-native';
 import style from './login.styles';
 import Button from '../../components/buttons';
-import {login} from '../../actions/auth';
 import {useDispatch} from 'react-redux';
+import {Login} from '../../store/actions';
 
-const Login = ({navigation}) => {
-  const [username, setUsername] = useState();
-  const [password, setPassword] = useState();
+const LoginScreen = ({navigation}) => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const dispatch = useDispatch();
-  const onLogin = () => {
-    let user = {
-      username: username,
-      password: password,
-    };
-    dispatch(login(user))
-      .then(response => {
-        if (response.status === 'success') {
-          navigation.replace('Home');
-        }
-      })
-      .catch(error => {
-        navigation.replace('Register');
-      });
+  const submit = () => {
+    dispatch(Login(username, password));
   };
-
   return (
     <View style={style.loginView}>
       <View style={style.containerText}>
@@ -49,15 +36,23 @@ const Login = ({navigation}) => {
         onChangeText={text => setPassword(text)}
       />
       <Button
+        title="Or register"
+        variant="link"
+        width={100}
+        height={20}
+        fontSize={10}
+        onPress={() => navigation.navigate('Register')}
+      />
+      <Button
         title="Log In"
-        onPress={() => onLogin()}
         variant="primary"
         width={250}
         height={40}
         fontSize={20}
+        onPress={submit}
       />
     </View>
   );
 };
 
-export default Login;
+export default LoginScreen;

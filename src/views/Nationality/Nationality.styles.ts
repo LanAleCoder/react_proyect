@@ -8,7 +8,6 @@ const styleNationality = StyleSheet.create({
     backgroundColor: theme.colors.BLUE_DARK_BACKGROUND,
     alignItems: 'center',
   },
-  containerDropwDown: {width: 250, justifyContent: 'center'},
   containerText: {
     alignItems: 'center',
   },

@@ -16,8 +16,8 @@ const Nationality = () => {
           </Text>
         </View>
       </View>
+      <DropDown />
       <CustomTI placeholder="Enter phone number" />
-      <DropDown label="dfsjf" valor="ksdjfkdasf" />
       <Button
         title="Continue"
         variant="primary"
