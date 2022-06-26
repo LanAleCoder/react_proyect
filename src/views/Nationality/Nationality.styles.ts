@@ -1,33 +1,29 @@
 import {StyleSheet} from 'react-native';
 import theme from '../../components/theme';
 
-const homeStyles = StyleSheet.create({
-  homeContainer: {
+const styleNationality = StyleSheet.create({
+  container: {
     flex: 1,
     justifyContent: 'center',
     backgroundColor: theme.colors.BLUE_DARK_BACKGROUND,
-  },
-  containerImage: {
     alignItems: 'center',
   },
-  containerPhrase: {
-    flexWrap: 'wrap',
+  containerText: {
     alignItems: 'center',
-    width: 300,
-    alignContent: 'center',
   },
-  textPhrase: {
+  textContainer: {justifyContent: 'center', width: 250, marginBottom: 8},
+  title: {
+    textAlign: 'center',
+    fontFamily: 'Koulen-Regular',
+    fontSize: theme.fonts.HEADING,
+    color: theme.colors.TEXT_COLOR,
+  },
+  text: {
     textAlign: 'center',
     fontFamily: 'Poppins-Regular',
-    color: theme.colors.TEXT_COLOR,
-    fontSize: theme.fonts.REGULAR_TEXT
-  },
-  titleHome: {
-    fontSize: theme.fonts.HEADING,
-    fontFamily: 'Poppins-Black',
-    textAlign: 'center',
+    fontSize: theme.fonts.TINY_TEXT,
     color: theme.colors.TEXT_COLOR,
   },
 });
 
-export default homeStyles;
+export default styleNationality;

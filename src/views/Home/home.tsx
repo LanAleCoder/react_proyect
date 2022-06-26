@@ -1,33 +1,39 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Image} from 'react-native';
 import homeStyles from './home.styles';
-import SVGCar from '../../utils/res/img/car.svg';
 import Button from '../../components/buttons';
-import {logout} from '../../actions/auth';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
+import {Logout} from '../../store/actions';
 
 const HomeView = ({navigation}) => {
-  const state = useSelector(state => state);
   const dispatch = useDispatch();
-  const onLogout = () => {
-    dispatch(logout()).then(response => {
-      if (response.status === 'success') {
-        navigation.replace('Login');
-      }
-    });
+  const submit = () => {
+    dispatch(Logout());
   };
   return (
     <View style={homeStyles.homeContainer}>
       <View style={homeStyles.containerImage}>
-        <SVGCar width={300} height={300} />
+        <Image
+          source={{
+            uri: 'https://icon-library.com/images/profile-icon-white/profile-icon-white-22.jpg',
+          }}
+          style={{width: 150, height: 150}}
+        />
         <View>
           <Text style={homeStyles.titleHome}>¡Bienvenido!</Text>
         </View>
         <View style={homeStyles.containerPhrase}>
-          <Text style={homeStyles.textPhrase}>{state.user}</Text>
+          <Text style={homeStyles.textPhrase}>User</Text>
         </View>
       </View>
-      <Button title="Cerrar sesión" onPress={() => onLogout()} />
+      <Button
+        title="Cerrar sesión"
+        variant="primary"
+        width={200}
+        height={40}
+        fontSize={19}
+        onPress={submit}
+      />
     </View>
   );
 };
