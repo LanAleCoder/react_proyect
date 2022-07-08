@@ -7,8 +7,8 @@ const buttonStyle = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
-    textAlign: 'center',
     fontFamily: 'Poppins-Regular',
+    marginHorizontal: 30,
   },
   touchableOp: {
     borderRadius: 50,

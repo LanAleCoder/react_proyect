@@ -30,13 +30,14 @@ const ProfileConfig = ({navigation}) => {
       <CustomTI placeholder="Last Name" />
       <Button
         title="Create Account"
-        width={200}
+        width={220}
         height={40}
         fontSize={19}
         variant="primary"
         onPress={() => {
           navigation.navigate('Select your Nationality');
         }}
+        textAlign="center"
       />
     </View>
   );

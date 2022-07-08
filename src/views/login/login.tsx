@@ -38,10 +38,11 @@ const LoginScreen = ({navigation}) => {
       <Button
         title="Or register"
         variant="link"
-        width={100}
+        width={150}
         height={20}
         fontSize={10}
         onPress={() => navigation.navigate('Register')}
+        textAlign="center"
       />
       <Button
         title="Log In"
@@ -50,6 +51,7 @@ const LoginScreen = ({navigation}) => {
         height={40}
         fontSize={20}
         onPress={submit}
+        textAlign="center"
       />
     </View>
   );

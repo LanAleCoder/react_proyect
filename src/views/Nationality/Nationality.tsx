@@ -24,13 +24,15 @@ const Nationality = () => {
         width={250}
         height={40}
         fontSize={19}
+        textAlign="center"
       />
       <Button
         title="Terms and conditions & privacy policy"
         variant="link"
-        width={300}
+        width={400}
         height={40}
         fontSize={15}
+        textAlign="center"
       />
     </View>
   );

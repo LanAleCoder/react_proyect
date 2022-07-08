@@ -27,12 +27,23 @@ const HomeView = ({navigation}) => {
         </View>
       </View>
       <Button
+        title="Ofrecer un ride"
+        variant="primary"
+        width={220}
+        height={40}
+        fontSize={19}
+        onPress={() => {
+          navigation.navigate('Ofrecer un ride');
+        }}
+      />
+      <Button
         title="Cerrar sesión"
         variant="primary"
-        width={200}
+        width={220}
         height={40}
         fontSize={19}
         onPress={submit}
+        textAlign="center"
       />
     </View>
   );

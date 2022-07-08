@@ -21,6 +21,10 @@ import stylesApp from './App.styles';
 import {Provider, useDispatch, useSelector} from 'react-redux';
 import {store} from './src/store';
 import {Persistlogin} from './src/store/actions';
+import Ride from './src/views/Ride';
+import {enableLatestRenderer} from 'react-native-maps';
+
+enableLatestRenderer();
 
 const Stack = createNativeStackNavigator();
 
@@ -28,6 +32,7 @@ const MainStack = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Ofrecer un ride" component={Ride} />
     </Stack.Navigator>
   );
 };
