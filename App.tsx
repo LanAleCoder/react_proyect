@@ -15,6 +15,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Register from './src/views/Register';
 import Login from './src/views/login';
 import Home from './src/views/Home';
+import Verification from './src/views/verification';
 import ProfileConfig from './src/views/profileCofiguration';
 import Nationality from './src/views/Nationality';
 import stylesApp from './App.styles';
@@ -39,11 +40,12 @@ const MainStack = () => {
 
 const AuthStack = () => {
   return (
-    <Stack.Navigator screenOptions={{headerShown: false}}>
+    <Stack.Navigator screenOptions={{headerShown: false}}> 
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Register" component={Register} />
       <Stack.Screen name="Create Account" component={ProfileConfig} />
       <Stack.Screen name="Select your Nationality" component={Nationality} />
+      <Stack.Screen name="Verification" component={Verification}/>
     </Stack.Navigator>
   );
 };

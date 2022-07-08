@@ -8,11 +8,13 @@ const CustomTI = ({
   secureTextEntry,
   onChangeText,
   value,
+  keyboardType,
 }: {
   placeholder: string;
   secureTextEntry?: boolean;
   onChangeText?: (text: string) => void;
   value?: string;
+  keyboardType?: string;
 }) => {
   return (
     <View style={styles.inputContainer}>
@@ -24,6 +26,7 @@ const CustomTI = ({
         secureTextEntry={secureTextEntry}
         onChangeText={onChangeText}
         value={value}
+        keyboardType={keyboardType}
       />
     </View>
   );

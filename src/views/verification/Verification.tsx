@@ -3,42 +3,52 @@ import {View, Text} from 'react-native';
 import DropDown from '../../components/buttonDropdown';
 import Button from '../../components/buttons';
 import CustomTI from '../../components/textInput';
-import styleNationality from './Nationality.styles';
+import styleNationality from './Verification.styles';
 
-const Nationality = ({navigation}) => {
+const Verification = ({navigation}) => {
   return (
     <View style={styleNationality.container}>
       <View style={styleNationality.containerText}>
-        <Text style={styleNationality.title}>Welcome</Text>
+        <Text style={styleNationality.title}>Verification</Text>
         <View style={styleNationality.textContainer}>
           <Text style={styleNationality.text}>
-            Fill the form to join or create a new account
+            Enter code sent to your phone
+          </Text>
+          <Text style={styleNationality.text}>
+            numer: +(502) 12345678
           </Text>
         </View>
       </View>
-      <DropDown />
-      <CustomTI placeholder="Enter phone number" />
+      <CustomTI 
+        placeholder="type your code" 
+        keyboardType="number-pad"
+      />
       <Button
-        title="Continue"
+        title="¿Code not Recieved?"
+        variant="link"
+        width={110}
+        height={13}
+        fontSize={10}
+      />
+      <Button
+        title="Go Login"
+        variant="primary"
         width={250}
         height={40}
         fontSize={19}
-        textAlign="center"
-        variant="primary"
         onPress={() => {
-          navigation.navigate('Verification');
+          navigation.navigate('Login');
         }}
       />
       <Button
         title="Terms and conditions & privacy policy"
         variant="link"
-        width={400}
+        width={300}
         height={40}
         fontSize={15}
-        textAlign="center"
       />
     </View>
   );
 };
 
-export default Nationality;
+export default Verification;
