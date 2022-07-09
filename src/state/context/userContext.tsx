@@ -17,9 +17,18 @@ const AuthProvider = ({children}: AuthChildren) => {
   const contextActions = useMemo(
     () => ({
       signIn: async (userName: string, password: string) => {
+        let result = '';
+        const characters =
+          'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        const charactersLength = characters.length;
+        for (let i = 0; i < charactersLength; i++) {
+          result += characters.charAt(
+            Math.floor(Math.random() * charactersLength),
+          );
+        }
         let userToken = null;
         if (userName === 'user' && password === '123') {
-          userToken = userName + password;
+          userToken = result;
           await AsyncStorage.setItem('token', userToken);
           console.log(userToken);
         } else {
