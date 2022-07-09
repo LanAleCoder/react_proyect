@@ -7,7 +7,7 @@ import Button from '../../components/buttons';
 import theme from '../../components/theme';
 import DatePicker from 'react-native-date-picker';
 import DropDownPicker from 'react-native-dropdown-picker';
-const Ride = () => {
+const Ride = ({navigation}) => {
   const [date, setDate] = useState(new Date());
   const [open, setOpen] = useState(false);
   const currentDate = Date.now();
@@ -143,6 +143,9 @@ const Ride = () => {
           height={40}
           width={250}
           variant="primary"
+          onPress={() => {
+            navigation.navigate('Ofrecer un ride map');
+          }}
         />
         <DatePicker
           modal

@@ -24,6 +24,7 @@ import {store} from './src/store';
 import {Persistlogin} from './src/store/actions';
 import Ride from './src/views/Ride';
 import {enableLatestRenderer} from 'react-native-maps';
+import Map from './src/views/map';
 
 enableLatestRenderer();
 
@@ -34,18 +35,19 @@ const MainStack = () => {
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Ofrecer un ride" component={Ride} />
+      <Stack.Screen name="Ofrecer un ride map" component={Map} />
     </Stack.Navigator>
   );
 };
 
 const AuthStack = () => {
   return (
-    <Stack.Navigator screenOptions={{headerShown: false}}> 
+    <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Register" component={Register} />
       <Stack.Screen name="Create Account" component={ProfileConfig} />
       <Stack.Screen name="Select your Nationality" component={Nationality} />
-      <Stack.Screen name="Verification" component={Verification}/>
+      <Stack.Screen name="Verification" component={Verification} />
     </Stack.Navigator>
   );
 };

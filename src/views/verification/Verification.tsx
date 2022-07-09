@@ -14,21 +14,17 @@ const Verification = ({navigation}) => {
           <Text style={styleNationality.text}>
             Enter code sent to your phone
           </Text>
-          <Text style={styleNationality.text}>
-            numer: +(502) 12345678
-          </Text>
+          <Text style={styleNationality.text}>numer: +(502) 12345678</Text>
         </View>
       </View>
-      <CustomTI 
-        placeholder="type your code" 
-        keyboardType="number-pad"
-      />
+      <CustomTI placeholder="type your code" keyboardType="number-pad" />
       <Button
         title="¿Code not Recieved?"
         variant="link"
-        width={110}
+        width={200}
         height={13}
         fontSize={10}
+        textAlign="center"
       />
       <Button
         title="Go Login"
@@ -39,13 +35,15 @@ const Verification = ({navigation}) => {
         onPress={() => {
           navigation.navigate('Login');
         }}
+        textAlign="center"
       />
       <Button
         title="Terms and conditions & privacy policy"
         variant="link"
-        width={300}
+        width={390}
         height={40}
         fontSize={15}
+        textAlign="center"
       />
     </View>
   );

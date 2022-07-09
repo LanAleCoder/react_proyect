@@ -26,7 +26,11 @@ public class MainActivity extends ReactActivity {
   protected ReactActivityDelegate createReactActivityDelegate() {
     return new MainActivityDelegate(this, getMainComponentName());
   }
-
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(null);
+  }
+  
   public static class MainActivityDelegate extends ReactActivityDelegate {
     public MainActivityDelegate(ReactActivity activity, String mainComponentName) {
       super(activity, mainComponentName);
@@ -40,9 +44,5 @@ public class MainActivity extends ReactActivity {
       return reactRootView;
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-      super.onCreate(null);
-    }
   }
 }
