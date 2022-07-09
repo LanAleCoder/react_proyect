@@ -1,17 +1,16 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import CustomTI from '../../components/textInput';
 import {View, Text} from 'react-native';
 import style from './login.styles';
 import Button from '../../components/buttons';
-import {useDispatch} from 'react-redux';
-import {Login} from '../../store/actions';
+import AuthContext from '../../state/context/userContext';
 
 const LoginScreen = ({navigation}) => {
-  const [username, setUsername] = useState('');
+  const [username, setUserName] = useState('');
   const [password, setPassword] = useState('');
-  const dispatch = useDispatch();
-  const submit = () => {
-    dispatch(Login(username, password));
+  const [{}, {signIn}] = useContext(AuthContext);
+  const onLogin = () => {
+    signIn(username, password);
   };
   return (
     <View style={style.loginView}>
@@ -27,7 +26,7 @@ const LoginScreen = ({navigation}) => {
         placeholder="User/email"
         secureTextEntry={false}
         value={username}
-        onChangeText={text => setUsername(text)}
+        onChangeText={text => setUserName(text)}
       />
       <CustomTI
         placeholder="Password"
@@ -50,8 +49,8 @@ const LoginScreen = ({navigation}) => {
         width={250}
         height={40}
         fontSize={20}
-        onPress={submit}
         textAlign="center"
+        onPress={() => onLogin()}
       />
     </View>
   );

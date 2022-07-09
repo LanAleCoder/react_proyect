@@ -1,14 +1,14 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {View, Text, Image} from 'react-native';
 import homeStyles from './home.styles';
 import Button from '../../components/buttons';
-import {useDispatch} from 'react-redux';
-import {Logout} from '../../store/actions';
+import AuthContext from '../../state/context/userContext';
 
 const HomeView = ({navigation}) => {
-  const dispatch = useDispatch();
-  const submit = () => {
-    dispatch(Logout());
+  const [{userToken}, {logOut}] = useContext(AuthContext);
+  const cerrarSesion = () => {
+    logOut();
+    console.log(userToken);
   };
   return (
     <View style={homeStyles.homeContainer}>
@@ -35,6 +35,7 @@ const HomeView = ({navigation}) => {
         onPress={() => {
           navigation.navigate('Ofrecer un ride');
         }}
+        textAlign="center"
       />
       <Button
         title="Cerrar sesión"
@@ -42,8 +43,8 @@ const HomeView = ({navigation}) => {
         width={220}
         height={40}
         fontSize={19}
-        onPress={submit}
         textAlign="center"
+        onPress={cerrarSesion}
       />
     </View>
   );
