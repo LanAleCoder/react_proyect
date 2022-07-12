@@ -27,6 +27,11 @@ const style = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: theme.colors.BLUE_DARK_BACKGROUND,
   },
+  containerInputs: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+  },
 });
 
 export default style;

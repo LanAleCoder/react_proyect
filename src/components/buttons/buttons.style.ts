@@ -2,13 +2,14 @@ import {StyleSheet} from 'react-native';
 
 const buttonStyle = StyleSheet.create({
   buttonContainer: {
-    margin: 13,
+    marginVertical: 13,
+    marginHorizontal: 10,
     justifyContent: 'center',
     alignItems: 'center',
   },
   text: {
-    textAlign: 'center',
     fontFamily: 'Poppins-Regular',
+    marginHorizontal: 30,
   },
   touchableOp: {
     borderRadius: 50,

@@ -1,17 +1,16 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import CustomTI from '../../components/textInput';
 import {View, Text} from 'react-native';
 import style from './login.styles';
 import Button from '../../components/buttons';
-import {useDispatch} from 'react-redux';
-import {Login} from '../../store/actions';
+import AuthContext from '../../state/context/userContext';
 
 const LoginScreen = ({navigation}) => {
-  const [username, setUsername] = useState('');
+  const [username, setUserName] = useState('');
   const [password, setPassword] = useState('');
-  const dispatch = useDispatch();
-  const submit = () => {
-    dispatch(Login(username, password));
+  const [{}, {signIn}] = useContext(AuthContext);
+  const onLogin = () => {
+    signIn(username, password);
   };
   return (
     <View style={style.loginView}>
@@ -23,34 +22,44 @@ const LoginScreen = ({navigation}) => {
           </Text>
         </View>
       </View>
-      <CustomTI
-        placeholder="User/email"
-        secureTextEntry={false}
-        value={username}
-        onChangeText={text => setUsername(text)}
-      />
-      <CustomTI
-        placeholder="Password"
-        secureTextEntry={true}
-        value={password}
-        onChangeText={text => setPassword(text)}
-      />
-      <Button
-        title="Or register"
-        variant="link"
-        width={100}
-        height={20}
-        fontSize={10}
-        onPress={() => navigation.navigate('Register')}
-      />
-      <Button
-        title="Log In"
-        variant="primary"
-        width={250}
-        height={40}
-        fontSize={20}
-        onPress={submit}
-      />
+      <View style={style.containerInputs}>
+        <CustomTI
+          placeholder="User/email"
+          secureTextEntry={false}
+          value={username}
+          onChangeText={text => setUserName(text)}
+          name="envelope"
+          color={'white'}
+          size={20}
+        />
+        <CustomTI
+          placeholder="Password"
+          secureTextEntry={true}
+          value={password}
+          onChangeText={text => setPassword(text)}
+          name="lock"
+          color={'white'}
+          size={20}
+        />
+        <Button
+          title="Or register"
+          variant="link"
+          width={250}
+          height={20}
+          fontSize={10}
+          onPress={() => navigation.navigate('Register')}
+          textAlign="center"
+        />
+        <Button
+          title="Log In"
+          variant="primary"
+          width={250}
+          height={40}
+          fontSize={20}
+          textAlign="center"
+          onPress={() => onLogin()}
+        />
+      </View>
     </View>
   );
 };

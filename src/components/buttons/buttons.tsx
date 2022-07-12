@@ -2,6 +2,9 @@ import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import buttonStyle from './buttons.style';
 import theme from '../theme';
+import FontAwesome5, {
+  FontAwesome5IconProps,
+} from 'react-native-vector-icons/FontAwesome5';
 
 // type Props = {
 //   title: string;
@@ -15,9 +18,26 @@ interface Props {
   height: number;
   width: number;
   fontSize: number;
+  textAlign: 'center' | 'auto' | 'left' | 'right' | 'justify' | undefined;
+  name?: FontAwesome5IconProps;
+  size?: number;
+  name2?: FontAwesome5IconProps;
+  size2?: number;
 }
 
-const Button = ({title, onPress, variant, height, width, fontSize}: Props) => {
+const Button = ({
+  title,
+  onPress,
+  variant,
+  height,
+  width,
+  fontSize,
+  textAlign,
+  name,
+  size,
+  name2,
+  size2,
+}: Props) => {
   const backgroundColor =
     variant === 'primary'
       ? theme.colors.RED_CARAMEL_BTN
@@ -35,7 +55,11 @@ const Button = ({title, onPress, variant, height, width, fontSize}: Props) => {
       <TouchableOpacity
         style={[buttonStyle.touchableOp, {backgroundColor}, {height}, {width}]}
         onPress={onPress}>
-        <Text style={[buttonStyle.text, {color}, {fontSize}]}>{title}</Text>
+        <Text style={[buttonStyle.text, {color}, {fontSize}, {textAlign}]}>
+          <FontAwesome5 name={name} onPress={onPress} size={size} />
+          {title}
+          <FontAwesome5 name={name2} onPress={onPress} size={size2} />
+        </Text>
       </TouchableOpacity>
     </View>
   );
