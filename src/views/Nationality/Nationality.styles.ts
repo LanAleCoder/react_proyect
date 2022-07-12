@@ -24,6 +24,16 @@ const styleNationality = StyleSheet.create({
     fontSize: theme.fonts.TINY_TEXT,
     color: theme.colors.TEXT_COLOR,
   },
+  dropDownStyles: {
+    borderColor: theme.colors.COLOR_BORDER_INPUT,
+    backgroundColor: 'transparent',
+    borderWidth: 3,
+  },
+  containerDropwDown: {
+    width: 250,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });
 
 export default styleNationality;

@@ -52,7 +52,15 @@ const App = () => {
             <>
               <Stack.Screen name="Home" component={Home} />
               <Stack.Screen name="Ofrecer un ride" component={Ride} />
-              <Stack.Screen name="Ofrecer un ride map" component={Map} />
+              <Stack.Screen
+                name="Ofrecer un ride map"
+                component={Map}
+                options={{
+                  title: 'Select your route',
+                  headerShown: true,
+                  headerTitleAlign: 'center',
+                }}
+              />
             </>
           )}
         </Stack.Navigator>

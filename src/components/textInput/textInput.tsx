@@ -1,5 +1,9 @@
 import React from 'react';
-import {View, TextInput as RNTextInput} from 'react-native';
+import {
+  View,
+  TextInput as RNTextInput,
+  KeyboardTypeOptions,
+} from 'react-native';
 import styles from './textInput.styles';
 import theme from '../theme';
 
@@ -14,7 +18,7 @@ const CustomTI = ({
   secureTextEntry?: boolean;
   onChangeText?: (text: string) => void;
   value?: string;
-  keyboardType?: string;
+  keyboardType?: KeyboardTypeOptions;
 }) => {
   return (
     <View style={styles.inputContainer}>
