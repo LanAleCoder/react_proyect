@@ -39,6 +39,10 @@
 		BF57B24DEE3B41BA9B4B38ED /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1537A9B840B47E7A83F60A9 /* Poppins-SemiBoldItalic.ttf */; };
 		DFCE69F5715C4A40A1713918 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8ABB229EAA34004BF8AD3F9 /* Poppins-Thin.ttf */; };
 		B78A1E5759DA461C9F4838F7 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F74A1E837A374B4299FD9CE0 /* Poppins-ThinItalic.ttf */; };
+		D7D0A7405A6B4016BFA4014B /* Kollektif-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC6254FAD0814696B24809CC /* Kollektif-Bold.ttf */; };
+		B75CBC08CC0543AFB8C58CC9 /* Kollektif-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4102D7B104E4C958EECA5D1 /* Kollektif-BoldItalic.ttf */; };
+		BF231318342648DDB6654139 /* Kollektif-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 048C8FA854034BA988BDA8FF /* Kollektif-Italic.ttf */; };
+		B7A11FD78BF64748B6910C0A /* Kollektif.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACCE37FABB2B4352823BAFF8 /* Kollektif.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +98,10 @@
 		E1537A9B840B47E7A83F60A9 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-SemiBoldItalic.ttf"; path = "../assets/fonts/Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		A8ABB229EAA34004BF8AD3F9 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; name = "Poppins-Thin.ttf"; path = "../assets/fonts/Poppins-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		F74A1E837A374B4299FD9CE0 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; name = "Poppins-ThinItalic.ttf"; path = "../assets/fonts/Poppins-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EC6254FAD0814696B24809CC /* Kollektif-Bold.ttf */ = {isa = PBXFileReference; name = "Kollektif-Bold.ttf"; path = "../assets/fonts/Kollektif-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C4102D7B104E4C958EECA5D1 /* Kollektif-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Kollektif-BoldItalic.ttf"; path = "../assets/fonts/Kollektif-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		048C8FA854034BA988BDA8FF /* Kollektif-Italic.ttf */ = {isa = PBXFileReference; name = "Kollektif-Italic.ttf"; path = "../assets/fonts/Kollektif-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ACCE37FABB2B4352823BAFF8 /* Kollektif.ttf */ = {isa = PBXFileReference; name = "Kollektif.ttf"; path = "../assets/fonts/Kollektif.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +235,10 @@
 				E1537A9B840B47E7A83F60A9 /* Poppins-SemiBoldItalic.ttf */,
 				A8ABB229EAA34004BF8AD3F9 /* Poppins-Thin.ttf */,
 				F74A1E837A374B4299FD9CE0 /* Poppins-ThinItalic.ttf */,
+				EC6254FAD0814696B24809CC /* Kollektif-Bold.ttf */,
+				C4102D7B104E4C958EECA5D1 /* Kollektif-BoldItalic.ttf */,
+				048C8FA854034BA988BDA8FF /* Kollektif-Italic.ttf */,
+				ACCE37FABB2B4352823BAFF8 /* Kollektif.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -353,6 +365,10 @@
 				BF57B24DEE3B41BA9B4B38ED /* Poppins-SemiBoldItalic.ttf in Resources */,
 				DFCE69F5715C4A40A1713918 /* Poppins-Thin.ttf in Resources */,
 				B78A1E5759DA461C9F4838F7 /* Poppins-ThinItalic.ttf in Resources */,
+				D7D0A7405A6B4016BFA4014B /* Kollektif-Bold.ttf in Resources */,
+				B75CBC08CC0543AFB8C58CC9 /* Kollektif-BoldItalic.ttf in Resources */,
+				BF231318342648DDB6654139 /* Kollektif-Italic.ttf in Resources */,
+				B7A11FD78BF64748B6910C0A /* Kollektif.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

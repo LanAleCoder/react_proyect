@@ -1,4 +1,4 @@
-import {Platform, StyleSheet, View} from 'react-native';
+import {Platform, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import MapView, {PROVIDER_DEFAULT, PROVIDER_GOOGLE} from 'react-native-maps';
 import theme from '../../components/theme';
@@ -23,28 +23,29 @@ const Map = () => {
           title={`Shortest route ${route}`}
           fontSize={10}
           height={40}
-          width={250}
+          width={200}
           textAlign={'center'}
         />
         <Button
           title={`Second route ${route}`}
           fontSize={10}
           height={40}
-          width={250}
+          width={200}
           textAlign={'center'}
         />
         <Button
           title={`Third route ${route}`}
           fontSize={10}
           height={40}
-          width={250}
+          width={200}
           textAlign={'center'}
         />
       </View>
       <View style={styles.submit}>
+        <Text style={styles.price}>You’ll earn Q18 per seat</Text>
         <Button
-          title={'Continue'}
-          fontSize={10}
+          title={'Publish'}
+          fontSize={19}
           height={40}
           width={250}
           textAlign={'center'}
@@ -82,6 +83,12 @@ const styles = StyleSheet.create({
   submit: {
     width: 300,
     flex: 2,
+  },
+  price: {
+    textAlign: 'center',
+    fontFamily: 'Poppins-Bold',
+    color: '#ffffff',
+    fontSize: 15,
   },
 });
 

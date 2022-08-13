@@ -23,6 +23,7 @@ import Ride from './src/views/Ride';
 import {enableLatestRenderer} from 'react-native-maps';
 import Map from './src/views/map';
 import AuthContext, {AuthProvider} from './src/state/context/userContext';
+import InitialScreen from './src/views/InitialScreen';
 
 enableLatestRenderer();
 
@@ -39,6 +40,7 @@ const App = () => {
         <Stack.Navigator screenOptions={{headerShown: false}}>
           {userToken == null ? (
             <>
+              <Stack.Screen name="InitialScreen" component={InitialScreen} />
               <Stack.Screen name="Login" component={Login} />
               <Stack.Screen name="Register" component={Register} />
               <Stack.Screen name="Create Account" component={ProfileConfig} />

@@ -70,7 +70,7 @@ const Ride = ({navigation}) => {
         />
         <View>
           <Button
-            title={'Add detour   '}
+            title={'Add detour'}
             fontSize={15}
             height={40}
             width={300}
@@ -125,6 +125,7 @@ const Ride = ({navigation}) => {
           size={15}
           iconColor="white"
           onPress={() => setOpen(true)}
+          marginHorizontal={10}
         />
         <Button
           title={'   Free seats'}

@@ -3,6 +3,8 @@ import {
   View,
   TextInput as RNTextInput,
   KeyboardTypeOptions,
+  NativeSyntheticEvent,
+  TextInputEndEditingEventData,
 } from 'react-native';
 import styles from './textInput.styles';
 import theme from '../theme';
@@ -13,12 +15,16 @@ const CustomTI = ({
   onChangeText,
   value,
   keyboardType,
+  onEndEditing,
 }: {
   placeholder: string;
   secureTextEntry?: boolean;
   onChangeText?: (text: string) => void;
   value?: string;
   keyboardType?: KeyboardTypeOptions;
+  onEndEditing?:
+    | ((e: NativeSyntheticEvent<TextInputEndEditingEventData>) => void)
+    | undefined;
 }) => {
   return (
     <View style={styles.inputContainer}>
@@ -31,6 +37,7 @@ const CustomTI = ({
         onChangeText={onChangeText}
         value={value}
         keyboardType={keyboardType}
+        onEndEditing={onEndEditing}
       />
     </View>
   );

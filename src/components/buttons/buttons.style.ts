@@ -8,12 +8,14 @@ const buttonStyle = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
-    fontFamily: 'Poppins-Regular',
-    marginHorizontal: 30,
+    fontFamily: 'Kollektif',
   },
   touchableOp: {
     borderRadius: 50,
     justifyContent: 'center',
+  },
+  icon: {
+    textAlign: 'center',
   },
 });
 
