@@ -8,75 +8,71 @@
  * @format
  */
 
-import React, {useEffect} from 'react';
+import React, {useEffect, useContext} from 'react';
 import {SafeAreaView} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Register from './src/views/Register';
 import Login from './src/views/login';
 import Home from './src/views/Home';
+import Verification from './src/views/verification';
 import ProfileConfig from './src/views/profileCofiguration';
 import Nationality from './src/views/Nationality';
 import stylesApp from './App.styles';
-import {Provider, useDispatch, useSelector} from 'react-redux';
-import {store} from './src/store';
-import {Persistlogin} from './src/store/actions';
+import Ride from './src/views/Ride';
+import {enableLatestRenderer} from 'react-native-maps';
+import Map from './src/views/map';
+import AuthContext, {AuthProvider} from './src/state/context/userContext';
+import InitialScreen from './src/views/InitialScreen';
+
+enableLatestRenderer();
 
 const Stack = createNativeStackNavigator();
 
-const MainStack = () => {
-  return (
-    <Stack.Navigator screenOptions={{headerShown: false}}>
-      <Stack.Screen name="Home" component={Home} />
-    </Stack.Navigator>
-  );
-};
-
-const AuthStack = () => {
-  return (
-    <Stack.Navigator screenOptions={{headerShown: false}}>
-      <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="Register" component={Register} />
-      <Stack.Screen name="Create Account" component={ProfileConfig} />
-      <Stack.Screen name="Select your Nationality" component={Nationality} />
-    </Stack.Navigator>
-  );
-};
-
-const RootNavigation = () => {
-  const token = useSelector(state => state.AuthReducer.authToken);
-  const dispatch = useDispatch();
-  const keepToken = () => {
-    dispatch(Persistlogin());
-  };
-  useEffect(() => {
-    keepToken();
-  }, []);
-  console.log(token);
-
-  return (
-    <NavigationContainer>
-      {token === null ? (
-        <>
-          <AuthStack />
-        </>
-      ) : (
-        <>
-          <MainStack />
-        </>
-      )}
-    </NavigationContainer>
-  );
-};
-
 const App = () => {
+  const [{userToken}, {persistToken}] = useContext(AuthContext);
+  useEffect(() => {
+    persistToken();
+  }, []);
   return (
-    <Provider store={store}>
-      <SafeAreaView style={stylesApp.main}>
-        <RootNavigation />
-      </SafeAreaView>
-    </Provider>
+    <SafeAreaView style={stylesApp.main}>
+      <NavigationContainer>
+        <Stack.Navigator screenOptions={{headerShown: false}}>
+          {userToken == null ? (
+            <>
+              <Stack.Screen name="InitialScreen" component={InitialScreen} />
+              <Stack.Screen name="Login" component={Login} />
+              <Stack.Screen name="Register" component={Register} />
+              <Stack.Screen name="Create Account" component={ProfileConfig} />
+              <Stack.Screen
+                name="Select your Nationality"
+                component={Nationality}
+              />
+              <Stack.Screen name="Verification" component={Verification} />
+            </>
+          ) : (
+            <>
+              <Stack.Screen name="Home" component={Home} />
+              <Stack.Screen name="Ofrecer un ride" component={Ride} />
+              <Stack.Screen
+                name="Ofrecer un ride map"
+                component={Map}
+                options={{
+                  title: 'Select your route',
+                  headerShown: true,
+                  headerTitleAlign: 'center',
+                }}
+              />
+            </>
+          )}
+        </Stack.Navigator>
+      </NavigationContainer>
+    </SafeAreaView>
   );
 };
 
-export default App;
+export default () => (
+  <AuthProvider>
+    <App />
+  </AuthProvider>
+);

@@ -78,6 +78,10 @@
 		<string>Poppins-SemiBoldItalic.ttf</string>
 		<string>Poppins-Thin.ttf</string>
 		<string>Poppins-ThinItalic.ttf</string>
+		<string>Kollektif-Bold.ttf</string>
+		<string>Kollektif-BoldItalic.ttf</string>
+		<string>Kollektif-Italic.ttf</string>
+		<string>Kollektif.ttf</string>
 	</array>
 </dict>
 </plist>

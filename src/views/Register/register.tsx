@@ -26,6 +26,7 @@ const Register = ({navigation}) => {
         height={40}
         width={250}
         fontSize={19}
+        textAlign="center"
       />
     </View>
   );
